@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello Dirisala! last trail success 07/14'
+    return 'Hello Team! Smart mobility FCSD'
 
 if __name__ == '__main__':
     app.run(debug=True)
