@@ -1,0 +1,15 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/fair-sandbox-354613/akshaydirisala3', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/fair-sandbox-354613/akshaydirisala3']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'test2', '--image', 'gcr.io/fair-sandbox-354613/akshaydirisala3', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+images:
+- gcr.io/fair-sandbox-354613/akshaydirisala3
+# [END cloudbuild_run_example_builddeploy]
+
