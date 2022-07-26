@@ -8,7 +8,7 @@ steps:
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'test2', '--image', 'gcr.io/fair-sandbox-354613/akshaydirisala3', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+  args: ['run', 'deploy', 'test2', '--image', 'gcr.io/fair-sandbox-354613/akshaydirisala4', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
 images:
 - gcr.io/fair-sandbox-354613/akshaydirisala4
 # [END cloudbuild_run_example_builddeploy]
